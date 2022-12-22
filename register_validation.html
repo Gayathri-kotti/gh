@@ -1,0 +1,65 @@
+<html> 
+<head> 
+<script> 
+function validation()
+{
+	let name=document.getElementById("name").value
+	name_len=name.length
+	if(name_len<6||name_length>30)
+	{
+		alert('invalid name')
+	}
+	let password=document.getElementById("password").value
+	pass_len=password.length
+	if(pass_length<6)
+	{
+		alert('invalid password')
+	}
+	let phone=document.getElementById("phn").value
+	phn_len=phone.length
+	if(phn_len<10||phn_len<10)
+	{
+		alert('invalid phn')
+	}
+	let email=document.getElementById("email").value
+	if(!email.match=(/^\([|\.-]?\w+)@\a+([|\.-]?\w+(\.\w+{2,3})+$/))
+	{
+		alert('invalid email')
+	}
+}
+
+</script> 
+</head> 
+<body> 
+ 
+<h2>REGISTRATION FORM</h2> 
+ 
+<form action="/action_page.php" > 
+ <label for="">Name:</label><br> 
+ <input type="text" id="name" name="name"><br> 
+ <label for="">Password:</label><br> 
+ <input type="passwordt" id="password" name="password" ><br> 
+ <label for="">Email:</label><br> 
+ <input type="text" id="email" name="email"><br> 
+ <label for="">Phone Number:</label><br> 
+ <input type="text" id="phn" name="phn"><br> 
+ <p>Gender</p> 
+ <input type="radio" id="male" name="gender" value="male"> 
+ <label for="">Male</label> 
+ <input type="radio" id="female" name="gender" value="female"> 
+ <label for="">Female</label><br> 
+ <p>Language</p> 
+ <input type="checkbox" id="lang1" name="lang1" value="English"> 
+ <label for="">English</label><br> 
+ <input type="checkbox" id="lang2" name="lang2" value="Telugu"> 
+ <label for="">Telugu</label><br> 
+ <input type="checkbox" id="lang3" name="lang3" value="Hindi"> 
+ <label for="">Hindi</label><br> 
+ <input type="checkbox" id="lang4" name="lang4" value="Tamil"> 
+ <label for="">Tamil</label><br> 
+ <label for="">Address:</label><br> 
+ <input type="text" id="add" name="add"><br> 
+ <input type="submit" value="Submit" onclick="validation()"> 
+ 
+</body> 
+</html>
